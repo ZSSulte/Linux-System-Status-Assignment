@@ -81,6 +81,10 @@ User:            steven
 Running as root: false
 Container:       false
 
+UPTIME
+------
+Uptime:        0 days, 0 hours, 42 minutes  (2548s)
+
 CPU
 ---
 CPU cores:       8
@@ -127,13 +131,15 @@ eth0     UP      192.168.1.25/24
 
 Listening Ports
 ---------------
-Netid State  Local Address:Port
-tcp   LISTEN 0.0.0.0:22
-tcp   LISTEN 0.0.0.0:80
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*          
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*                          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          
 
 Logged-in Users
 ---------------
-steven   pts/0   2026-09-30 21:45
+none (no login sessions in utmp)
 
 ========================================
              END OF REPORT
@@ -215,14 +221,16 @@ Example:
       "eth0     UP      192.168.1.25/24"
     ],
     "listening_ports": [
-      "Netid State Local Address:Port",
-      "tcp LISTEN 0.0.0.0:22",
-      "tcp LISTEN 0.0.0.0:80"
+  "Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess",
+      "udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*          ",
+      "udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*          ",
+      "tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          ",
+      "tcp   LISTEN 0      4096           [::1]:631          [::]:*          "
     ]
   },
 
   "logged_in_users": [
-    "steven   pts/0   2026-09-30 21:45"
+    "none (no login sessions in utmp)"
   ]
 }
 ```
@@ -245,7 +253,7 @@ It does not automatically invoke `sudo` or request an interactive password.
 
 ### Non-Interactive Safe
 
-The script does not require user input or a TTY. It can therefore be used manually or from automation such as cron or systemd.
+The script does not require user input or a TTY (Teletypewriter which refers to the core subsystem and device files within the Linux kernel that manage text-based input and output.) It can therefore be used manually or from automation such as cron or systemd.
 
 ### Idempotent and Read-Only
 
@@ -282,9 +290,9 @@ The script performs basic container detection using indicators such as `/.docker
 ## Project Structure
 
 ```text
-linux-system-status/
-├── README.md
+Linux-System-Status-Assignment /
 ├── .gitignore
+├── README.md
 └── linux-system-status.sh
 ```
 
