@@ -4,8 +4,8 @@
 # Linux System Status Checker
 #
 # Usage:
-#   ./system_status.sh
-#   ./system_status.sh --json
+#   ./linux-system-status.sh
+#   ./linux-system-status.sh --json
 #
 # The script is read-only and does not modify system state.
 # ============================================================
