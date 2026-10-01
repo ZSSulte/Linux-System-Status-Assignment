@@ -253,7 +253,7 @@ It does not automatically invoke `sudo` or request an interactive password.
 
 ### Non-Interactive Safe
 
-The script does not require user input or a TTY. It can therefore be used manually or from automation such as cron or systemd.
+The script does not require user input or a TTY (Teletypewriter which refers to the core subsystem and device files within the Linux kernel that manage text-based input and output.) It can therefore be used manually or from automation such as cron or systemd.
 
 ### Idempotent and Read-Only
 
@@ -290,7 +290,7 @@ The script performs basic container detection using indicators such as `/.docker
 ## Project Structure
 
 ```text
-linux-system-status/
+Linux-System-Status-Assignment /
 ├── .gitignore
 ├── README.md
 └── linux-system-status.sh
