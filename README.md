@@ -131,13 +131,15 @@ eth0     UP      192.168.1.25/24
 
 Listening Ports
 ---------------
-Netid State  Local Address:Port
-tcp   LISTEN 0.0.0.0:22
-tcp   LISTEN 0.0.0.0:80
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*          
+udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*                          
+tcp   LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          
+tcp   LISTEN 0      4096       127.0.0.1:631       0.0.0.0:*          
 
 Logged-in Users
 ---------------
-steven   pts/0   2026-09-30 21:45
+none (no login sessions in utmp)
 
 ========================================
              END OF REPORT
@@ -219,14 +221,16 @@ Example:
       "eth0     UP      192.168.1.25/24"
     ],
     "listening_ports": [
-      "Netid State Local Address:Port",
-      "tcp LISTEN 0.0.0.0:22",
-      "tcp LISTEN 0.0.0.0:80"
+  "Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess",
+      "udp   UNCONN 0      0            0.0.0.0:5353      0.0.0.0:*          ",
+      "udp   UNCONN 0      0         127.0.0.54:53        0.0.0.0:*          ",
+      "tcp   LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          ",
+      "tcp   LISTEN 0      4096           [::1]:631          [::]:*          "
     ]
   },
 
   "logged_in_users": [
-    "steven   pts/0   2026-09-30 21:45"
+    "none (no login sessions in utmp)"
   ]
 }
 ```
