@@ -170,7 +170,6 @@ Example:
     "running_as_root": false,
     "container": false
   },
-
   "cpu": {
     "cores": 8,
     "usage_percent": 6.8,
@@ -180,7 +179,6 @@ Example:
       "15_minutes": 0.39
     }
   },
-
   "memory": {
     "total_kb": 16000000,
     "used_kb": 6500000,
@@ -189,11 +187,9 @@ Example:
     "swap_total_kb": 2000000,
     "swap_used_kb": 0
   },
-
   "uptime": {
     "seconds": 86400
   },
-
   "disk": {
     "filesystems": [
       "Filesystem      Size  Used Avail Use% Mounted on",
@@ -201,7 +197,6 @@ Example:
       "/dev/sdb1       500G  210G  290G  42% /home"
     ]
   },
-
   "processes": {
     "top_cpu": [
       "PID USER     %CPU %MEM COMMAND",
@@ -214,7 +209,6 @@ Example:
       "3211 steven    1.4  3.8 chrome"
     ]
   },
-
   "network": {
     "interfaces": [
       "lo       UNKNOWN 127.0.0.1/8",
@@ -228,7 +222,6 @@ Example:
       "tcp   LISTEN 0      4096           [::1]:631          [::]:*          "
     ]
   },
-
   "logged_in_users": [
     "none (no login sessions in utmp)"
   ]
