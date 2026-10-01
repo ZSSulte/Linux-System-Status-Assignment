@@ -81,6 +81,10 @@ User:            steven
 Running as root: false
 Container:       false
 
+UPTIME
+------
+Uptime:        0 days, 0 hours, 42 minutes  (2548s)
+
 CPU
 ---
 CPU cores:       8
