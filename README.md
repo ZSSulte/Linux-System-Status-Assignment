@@ -283,9 +283,9 @@ The script performs basic container detection using indicators such as `/.docker
 
 ```text
 linux-system-status/
-├── system_status.sh
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── linux-system-status.sh
 ```
 
 ## Author
