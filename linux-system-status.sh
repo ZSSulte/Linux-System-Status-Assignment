@@ -215,6 +215,12 @@ print_human() {
     echo "Container:      $CONTAINER"
     echo
 
+    echo "UPTIME"
+    echo "------"
+    echo "Uptime:        $((UPTIME_SECONDS / 86400)) days, $(( (UPTIME_SECONDS % 86400) / 3600 )) hours, $(( (UPTIME_SECONDS % 3600) / 60 )) minutes  (${UPTIME_SECONDS}s)"
+    echo
+
+
     echo "CPU"
     echo "---"
     echo "CPU cores:      $CPU_CORES"
